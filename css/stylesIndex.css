@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   font-family: "Orbitron", sans-serif;
+  letter-spacing: 0.1.6em;
+  line-height: 1.4;
 }
 
 /* NAVBAR */
@@ -24,6 +26,7 @@
   width: 100%;
   position: fixed;
   font-weight: 100;
+  z-index: 10;
 
 }
 
@@ -31,6 +34,7 @@
   display: flex;
   align-items: center;
 }
+
 
 #icono-logo {
   width: 2rem;
@@ -43,8 +47,15 @@
 }
 
 #ul_navbar {
-  display: flex;
-  align-items: center;
+  display: none;
+}
+
+@media (min-width: 768px) { 
+
+  #ul_navbar {
+    display: flex;
+    align-items: center;
+  }
 }
 
 #ul_navbar a {
@@ -75,7 +86,6 @@ a {
   text-decoration: none;
 }
 
-/* HERO */
 
 /* FOOTER */
 .footer {
@@ -97,30 +107,79 @@ a {
 
 .column2{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2px;
   margin-top: 1.5rem;
 }
-.column3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-    margin-top: 1.5rem;
-  }
-  
+
+
+
 
 .column1{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   margin-bottom: 1rem;
 }
+
+@media (min-width: 640px) { 
+
+  .column2{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .column1{
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .logo-footer{
+    grid-column: span 2 / span 2;
+  }
+  .social-newsletter{
+    grid-column: span 2 / span 2;
+  }
+
+  #column3 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    margin-top: 2rem;
+  }
+  #section-quienes {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+}
+
+@media (min-width: 768px) { 
+  #column3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .column2 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1024px) { 
+  #column3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .column2 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+
 
 .logo-footer {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   gap: 2px;
-  grid-column: span 2;
+
+  margin-bottom: 1rem;
+
 }
 
 .logo-footer img {
@@ -151,7 +210,7 @@ a {
   flex-direction: column;
   align-items: end;
   gap: 4px;
-  grid-column: span 2;
+
   padding-right: 2rem;
 }
 
@@ -179,7 +238,7 @@ a {
   gap: 3px;
 }
 
-.column2 .subscribe input {
+#input-correo {
   border-radius: 1rem;
   padding: 5px 10px;
   width: 100%;
@@ -196,8 +255,9 @@ a {
 
 .column3 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 2px;
+  margin-top: 1rem;
 }
 
 .column3 div {
@@ -211,8 +271,11 @@ a {
 }
 
 .content-comunicate{
+  margin:5px 0px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  font-size: 13px;
 }
 
 .privacy {
@@ -235,12 +298,20 @@ a {
 /* HERO */
 .article-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   height: 100vh;
   padding-top: 2rem;
   width: 100%;
   color: white;
 }
+
+@media (min-width: 1024px) { 
+
+  .article-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 
 .section-flex {
   display: flex;
@@ -308,8 +379,16 @@ a {
 
 .section-quienes {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
 }
+
+@media (min-width: 1024px) { 
+  #section-quienes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+}
+
 
 .image-container {
   display: none;
@@ -324,14 +403,21 @@ a {
     margin-left: 10rem;
     width: 25rem;
   }
+  .text-container {
+    text-align: center;
+    padding-top: 6rem;
+    padding-left: 2rem;
+    padding-right: 7rem;
+  }
 }
 
 .text-container {
   text-align: center;
   padding-top: 6rem;
   padding-left: 2rem;
-  padding-right: 7rem;
+  padding-right: 2rem;
 }
+
 
 .text-title {
   font-size: 2rem;
@@ -375,12 +461,13 @@ a {
   margin-top: 10px;
   display: flex;
   justify-content: center;
+  padding: 2rem;
 }
 
 .testimonial {
   background-color: white;
-  margin: 10px;
-  padding: 16px;
+  margin: 2px;
+  padding:1rem 6px;
   color: black;
   border-radius: 1rem;
   text-align: center;
@@ -388,8 +475,8 @@ a {
 }
 
 .circle {
-  width: 14px;
-  height: 14px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: #1a2e35;
   position: absolute;
@@ -398,11 +485,11 @@ a {
 }
 
 .left {
-  left: -6px;
+  left: -24px;
 }
 
 .right {
-  right: -6px;
+  right: -24px;
 }
 
 @media (min-width: 1024px) {
@@ -444,7 +531,7 @@ a {
 }
 
 .image2 {
-  width: 13px;
+  width: 23px;
   margin-top: 1rem;
 }
 

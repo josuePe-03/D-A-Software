@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   font-family: "Orbitron", sans-serif;
+  letter-spacing: 0.1.6em;
+  line-height: 1.4;
 }
 
 /* NAVBAR */
@@ -24,6 +26,7 @@
   width: 100%;
   position: fixed;
   font-weight: 100;
+  z-index: 10;
 }
 
 #container_nav {
@@ -42,8 +45,14 @@
 }
 
 #ul_navbar {
-  display: flex;
-  align-items: center;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #ul_navbar {
+    display: flex;
+    align-items: center;
+  }
 }
 
 #ul_navbar a {
@@ -73,9 +82,6 @@ ul {
 a {
   text-decoration: none;
 }
-
-/* HERO */
-
 /* FOOTER */
 .footer {
   position: relative;
@@ -96,29 +102,71 @@ a {
 
 .column2 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2px;
-  margin-top: 1.5rem;
-}
-.column3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2px;
   margin-top: 1.5rem;
 }
 
 .column1 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .column2 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .column1 {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .logo-footer {
+    grid-column: span 2 / span 2;
+  }
+  .social-newsletter {
+    grid-column: span 2 / span 2;
+  }
+
+  #column3 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    margin-top: 2rem;
+  }
+  #section-quienes {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  #column3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .column2 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  #column3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .column2 {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .logo-footer {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   gap: 2px;
-  grid-column: span 2;
+
+  margin-bottom: 1rem;
 }
 
 .logo-footer img {
@@ -148,7 +196,6 @@ a {
   flex-direction: column;
   align-items: end;
   gap: 4px;
-  grid-column: span 2;
   padding-right: 2rem;
 }
 
@@ -175,7 +222,7 @@ a {
   gap: 3px;
 }
 
-.column2 .subscribe input {
+#input-correo {
   border-radius: 1rem;
   padding: 5px 10px;
   width: 100%;
@@ -192,8 +239,9 @@ a {
 
 .column3 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 2px;
+  margin-top: 1rem;
 }
 
 .column3 div {
@@ -207,8 +255,11 @@ a {
 }
 
 .content-comunicate {
+  margin: 5px 0px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  font-size: 13px;
 }
 
 .privacy {
@@ -244,19 +295,27 @@ main header {
 }
 
 #card {
-  width: 90%;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   background: #2d2f30;
   color: white;
-  border-radius: 2rem;
+  max-width: 20rem;
+  border-radius: 1rem;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  #card {
+    flex-direction: row;
+    max-width: 50rem;
+  }
 }
 
 #content-img {
-  width: 35rem;
-  height: 10rem;
+  width: 95%;
+  height: 8rem;
   background-color: rgb(139, 130, 148);
+  margin: auto;
 }
 
 .content-title {
@@ -269,8 +328,7 @@ main header {
 }
 
 #content-text {
-  padding: 1rem;
-  width: 50%;
+  padding: 1rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -280,23 +338,35 @@ main header {
   margin-bottom: 1rem;
   font-weight: 100;
 }
-
-#content-button {
-  width: 30%;
-  display: flex;
-  align-items: center;
+#content-text p {
+  font-size: 11px;
 }
 
+#content-button {
+  padding: 0rem 0rem 0rem 0rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  padding: 1rem;
+
+}
+
+@media (min-width: 768px) {
+  #content-button {
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+
+}
+
+
 #content-button button {
-  width: 50%;
-  display: flex;
   border-radius: 0.5rem;
-  height: fit-content;
   padding: 0.5rem 1rem;
+  width: 100%;
+  height: fit-content;
+  font-size: 10px;
   color: white;
   background-color: #1a2e35;
 }
 
-#button1 {
-  margin-right: 0.5rem;
-}
