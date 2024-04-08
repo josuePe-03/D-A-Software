@@ -3,18 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>D&A Software</title>
     <link href="https://fonts.cdnfonts.com/css/orbitron" rel="stylesheet" />
     <link rel="stylesheet" href="./css/stylesPortafolio.css" />
   </head>
   <body id="main">
     <!-- HEADER -->
-    <header id="header">
-      <div id="container_nav">
-        <img src="./img//icono-logo.png" id="icono-logo" alt="" />
-        <span> D&A Software </span>
+    <header class="header-nav">
+      <div id="header">
+        <div id="container_nav">
+          <div class="container-logo">
+            <img src="./img//icono-logo.png" id="icono-logo" alt="" />
+            <span> D&A Software </span>
+          </div>
+          <div class="container-svg-navbar">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="34"
+              height="34"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2 tootle-navbar"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="" />
+              <path d="M4 6l16 0" />
+              <path d="M4 12l16 0" />
+              <path d="M4 18l16 0" />
+            </svg>
+          </div>
+        </div>
       </div>
-      <nav id="navbar">
+      <nav id="navbar" class="hidden">
         <ul id="ul_navbar">
           <li><a href="index.html">Inicio</a></li>
           <li><a href="portafolio.html">Portafolio</a></li>
@@ -98,6 +121,9 @@
         </div>
       </section>
     </article>
+
+    
+   
 
     <!-- ARTE Y DISEÑO -->
     <article class="section2" id="section2">
@@ -253,9 +279,9 @@
       </section>
     </article>
 
-    <!-- TE PUEDE INTERESAR -->
+     <!-- TE PUEDE INTERESAR -->
 
-    <article class="section1" id="section1">
+     <article class="section1" id="section1">
       <section class="section1-content">
         <div class="section1-title">
           <h3>Te puede interesar</h3>
@@ -305,27 +331,25 @@
       </section>
     </article>
 
+
+
+   
     <!-- BOYSEND -->
 
     <article class="grid-article-boy-send" id="section1">
-      <div class="flex-center">
-        <div
-          class="flex-col-justify-around-items-center px-10 lg-px-0 lg-w-1/2"
-        >
-          <div class="space-y-4 w-full">
-            <div
-              class="bg-gray-100 p-4 w-fit rounded-full shadow-lg shadow-gray-400"
-            ></div>
-            <h2 class="text-3xl font-semibold">BoySeng</h2>
+      <div class="container-boy-send">
+
+          <div class="">
+            <h2 class="">BoySeng</h2>
             <p>
               TODOS PODEMOS REALIZAR <br />
               PROYECTOS DE INGENIERIA
             </p>
           </div>
 
-          <div class="mt-10 lg-mt-0 container-store">
+          <div class="container-boysend-dowload ">
             <div
-              class="lg-flex lg-space-x-4 space-y-2 lg-space-y-0 container-store-2"
+              class="container-dowload"
             >
               <div>
                 <img class="img-play-store" src="./img/playstore.png" alt="" />
@@ -334,32 +358,35 @@
                 <img class="img-apple-store" src="./img/appstore.png" alt="" />
               </div>
             </div>
-            <div class="">
-              <p class="text-12px mt-8">
+            <div class="container-text-boy-send">
+              <p class="text-12px mt-8 text-boy-send">
                 Un buen desarrollador de software trabaja con disciplina y
                 constancia desde el primer día.
               </p>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="hidden md-flex justify-center items-center relative-0">
-        <div class="absolute top-11rem md-left-20 lg-left-0 z-10">
-          <img
-            class="md-w-18rem lg-w-20rem"
-            src="./img/png-iphone.png"
-            alt=""
-          />
-        </div>
-        <div class="absolute top-6rem left-4">
-          <img
-            class="md-w-20rem lg-w-25rem"
-            src="./img/png-iphone.png"
-            alt=""
-          />
-        </div>
       </div>
     </article>
+
+    <div class="container-phone">
+      <div class=""
+      id="container-img-phone"
+      >
+        <img
+          class="img-phone-1"
+          src="./img/png-iphone.png"
+          alt=""
+        />
+        <img
+        class="img-phone-2 "
+          src="./img/png-iphone.png"
+          alt=""
+        />
+      </div>
+
+
+    </div>
+
 
     <!-- FOOTER -->
     <div class="footer">
@@ -421,6 +448,7 @@
           <div class="content-comunicate">
             <img
               class="content-comunicate"
+              id="social"
               src="./img/icono-call.png"
               alt="Phone"
             />
@@ -433,5 +461,7 @@
         <h3>© 2024 All Rights Reserved. D&A Software R</h3>
       </div>
     </div>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>

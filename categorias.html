@@ -3,18 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>D&A Software</title>
     <link href="https://fonts.cdnfonts.com/css/orbitron" rel="stylesheet" />
     <link rel="stylesheet" href="./css/stylesCategoria.css" />
   </head>
   <body id="main">
     <!-- HEADER -->
-    <header id="header">
-      <div id="container_nav">
-        <img src="./img//icono-logo.png" id="icono-logo" alt="" />
-        <span> D&A Software </span>
+    <header class="header-nav">
+      <div id="header">
+        <div id="container_nav">
+          <div class="container-logo">
+            <img src="./img//icono-logo.png" id="icono-logo" alt="" />
+            <span> D&A Software </span>
+          </div>
+          <div class="container-svg-navbar">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="34"
+              height="34"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2 tootle-navbar"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="" />
+              <path d="M4 6l16 0" />
+              <path d="M4 12l16 0" />
+              <path d="M4 18l16 0" />
+            </svg>
+          </div>
+        </div>
       </div>
-      <nav id="navbar">
+      <nav id="navbar" class="hidden">
         <ul id="ul_navbar">
           <li><a href="index.html">Inicio</a></li>
           <li><a href="portafolio.html">Portafolio</a></li>
@@ -45,6 +68,7 @@
       </nav>
     </header>
 
+
     <main>
       <header>
         <h1>Categorias</h1>
@@ -66,7 +90,7 @@
           </p>
         </div>
         <div id="content-button">
-          <button id="button1">Leer mas</button>
+          <button class="button1" id="button1">Leer mas</button>
           <button>Descargar</button>
         </div>
       </div>
@@ -116,8 +140,8 @@
 
     </main>
 
-     <!-- FOOTER -->
-     <div class="footer">
+    <!-- FOOTER -->
+    <div class="footer">
       <div class="footer-content">
         <!-- COLUMNA 1 -->
         <div class="column1">
@@ -162,7 +186,7 @@
           </div>
         </div>
         <!-- COLUMNA 3 -->
-        <div class="column3">
+        <div class="column3" id="column3">
           <div class="content-comunicate">
             <img id="social" src="./img/icono-ubicacion.png" alt="Location" />
             <h3>Boca del rio,Veracruz</h3>
@@ -172,7 +196,10 @@
             <h3>rrodriguez@dasoftwarer.com</h3>
           </div>
           <div class="content-comunicate">
-            <img class="content-comunicate" src="./img/icono-call.png" alt="Phone" />
+            <img class="content-comunicate" 
+            id="social"
+            
+            src="./img/icono-call.png" alt="Phone" />
             <h3>Teléfono: 2294618601</h3>
           </div>
         </div>
@@ -182,5 +209,7 @@
         <h3>© 2024 All Rights Reserved. D&A Software R</h3>
       </div>
     </div>
+    <script src="./js/main.js"></script>
+
   </body>
 </html>
