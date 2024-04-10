@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Agregar un evento de escucha para el cambio de tamaño de la ventana
     window.addEventListener('resize', handleResize);
 });
+<<<<<<< HEAD
 
 (function ($) {
   "use strict";
@@ -153,3 +154,5 @@ document.addEventListener('DOMContentLoaded', function() {
   
 })(jQuery);
 
+=======
+>>>>>>> 4fadd702953ff6dbfd41340ff158c37319077785
